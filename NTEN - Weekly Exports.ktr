@@ -120,7 +120,7 @@
     </notepad>
   </notepads>
   <order>
-  <hop> <from>Journal Opt-In</from><to>Journal</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Opt-In</from><to>Journal Only</to><enabled>Y</enabled> </hop>  <hop> <from>Change Journal</from><to>Change headers</to><enabled>Y</enabled> </hop>  <hop> <from>Change headers</from><to>Opt-in: yes&#47;no</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Only</from><to>Journal only &lt;&gt; All Email</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Journal only &lt;&gt; All Email</to><enabled>Y</enabled> </hop>  <hop> <from>Journal</from><to>Journal &lt;&gt; All Email</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Journal &lt;&gt; All Email</to><enabled>Y</enabled> </hop>  <hop> <from>Journal &lt;&gt; All Email</from><to>New (Journal)</to><enabled>Y</enabled> </hop>  <hop> <from>Journal only &lt;&gt; All Email</from><to>New (Journal Only)</to><enabled>Y</enabled> </hop>  <hop> <from>New (Journal)</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>New (Journal Only)</from><to>Dummy (do nothing) 2</to><enabled>Y</enabled> </hop>  <hop> <from>Opt-in: yes&#47;no</from><to>Journal&#47;Journal Only</to><enabled>Y</enabled> </hop>  <hop> <from>Journal&#47;Journal Only</from><to>Journal Opt-In</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Change Journal</from><to>Change headers</to><enabled>Y</enabled> </hop>  <hop> <from>Change headers</from><to>Journal or Journal Only</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Journal or Journal Only</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Get New</from><to>Journal Filter</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-subscribeAll.xls</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-journalOnly.xls</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>All Email</name>
     <type>CsvInput</type>
@@ -159,8 +159,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>325</yloc>
+      <xloc>400</xloc>
+      <yloc>425</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -521,8 +521,8 @@
       </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1075</xloc>
-      <yloc>450</yloc>
+      <xloc>650</xloc>
+      <yloc>375</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -627,101 +627,14 @@
       </custom>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1050</xloc>
-      <yloc>200</yloc>
+      <xloc>650</xloc>
+      <yloc>225</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>800</xloc>
-      <yloc>50</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Dummy (do nothing) 2</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>800</xloc>
-      <yloc>575</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Journal</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>525</xloc>
-      <yloc>200</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Journal &lt;&gt; All Email</name>
+    <name>Get New</name>
     <type>StreamLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -749,128 +662,14 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>200</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Journal Only</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>525</xloc>
-      <yloc>450</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Journal Opt-In</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Journal</send_true_to>
-<send_false_to>Journal Only</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>opt_in</leftvalue>
- <function>CONTAINS</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>yes</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>525</xloc>
+      <xloc>400</xloc>
       <yloc>325</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Journal only &lt;&gt; All Email</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <from>All Email</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>N</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>email</name>
-        <field>email</field>
-      </key>
-      <value>
-        <name>email</name>
-        <rename>duplicate</rename>
-        <default>new</default>
-        <type>String</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>450</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>New (Journal Only)</name>
+    <name>Journal Filter</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -879,85 +678,26 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>Sort rows 2</send_true_to>
-<send_false_to>Dummy (do nothing) 2</send_false_to>
+<send_true_to>ChangeJournal-subscribeAll.xls</send_true_to>
+<send_false_to>ChangeJournal-journalOnly.xls</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
- <leftvalue>duplicate</leftvalue>
+ <leftvalue>source</leftvalue>
  <function>=</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>new</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>Journal</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>800</xloc>
-      <yloc>450</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>New (Journal)</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Journal&#47;Journal Only</send_true_to>
-<send_false_to>Dummy (do nothing)</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>duplicate</leftvalue>
- <function>=</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>new</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>800</xloc>
-      <yloc>200</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Opt-in: yes&#47;no</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <field_to_use>opt_in</field_to_use>
-    <target_field/>
-    <non_match_default/>
-    <fields>
-      <field>
-        <source_value>Yes, sign me up!</source_value>
-        <target_value>yes</target_value>
-      </field>
-      <field>
-        <source_value>No thanks</source_value>
-        <target_value>no</target_value>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>275</xloc>
+      <xloc>500</xloc>
       <yloc>325</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Journal&#47;Journal Only</name>
+    <name>Journal or Journal Only</name>
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
@@ -971,17 +711,17 @@
     <non_match_default/>
     <fields>
       <field>
-        <source_value>no</source_value>
-        <target_value>Journal Only</target_value>
+        <source_value>Yes, sign me up!</source_value>
+        <target_value>Journal</target_value>
       </field>
       <field>
-        <source_value>yes</source_value>
-        <target_value>Journal</target_value>
+        <source_value>No thanks</source_value>
+        <target_value>Journal Only</target_value>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>400</xloc>
+      <xloc>300</xloc>
       <yloc>325</yloc>
       <draw>Y</draw>
       </GUI>
