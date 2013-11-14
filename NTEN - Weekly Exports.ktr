@@ -70,8 +70,8 @@
     <notepad>
       <note>Add de-dupe step
   make sure all export rows are unique</note>
-      <xloc>900</xloc>
-      <yloc>325</yloc>
+      <xloc>1200</xloc>
+      <yloc>125</yloc>
       <width>231</width>
       <heigth>42</heigth>
       <fontname>Arial</fontname>
@@ -120,12 +120,12 @@
     </notepad>
   </notepads>
   <order>
-  <hop> <from>Change Journal</from><to>Change headers</to><enabled>Y</enabled> </hop>  <hop> <from>Change headers</from><to>Journal or Journal Only</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Journal or Journal Only</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Get New</from><to>Journal Filter</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-subscribeAll.xls</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-journalOnly.xls</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Change Journal</from><to>Change headers</to><enabled>Y</enabled> </hop>  <hop> <from>Change headers</from><to>Journal or Journal Only</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Journal or Journal Only</from><to>Get New</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-subscribeAll.xls</to><enabled>Y</enabled> </hop>  <hop> <from>Journal Filter</from><to>ChangeJournal-journalOnly.xls</to><enabled>Y</enabled> </hop>  <hop> <from>Newsletter Quick Sign-up</from><to>email field only</to><enabled>Y</enabled> </hop>  <hop> <from>Quick Sign-up additional info</from><to>select&#47;normalize headers</to><enabled>Y</enabled> </hop>  <hop> <from>select&#47;normalize headers</from><to>Sort rows</to><enabled>Y</enabled> </hop>  <hop> <from>email field only</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>  <hop> <from>Sort rows 2</from><to>Join on Quick sign-up email</to><enabled>Y</enabled> </hop>  <hop> <from>Sort rows</from><to>Unique rows</to><enabled>Y</enabled> </hop>  <hop> <from>Unique rows</from><to>Join on Quick sign-up email</to><enabled>Y</enabled> </hop>  <hop> <from>Newsletter Sign-up</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Join on Quick sign-up email</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Sort rows 3</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Unique rows (HashSet)</to><enabled>Y</enabled> </hop>  <hop> <from>Sort rows 3</from><to>Unique rows (HashSet)</to><enabled>Y</enabled> </hop>  <hop> <from>Unique rows (HashSet)</from><to>Compare All Emails</to><enabled>Y</enabled> </hop>  <hop> <from>All Email</from><to>Compare All Emails</to><enabled>Y</enabled> </hop>  <hop> <from>Get New</from><to>remove duplicates</to><enabled>Y</enabled> </hop>  <hop> <from>remove duplicates</from><to>Journal Filter</to><enabled>Y</enabled> </hop>  <hop> <from>remove duplicates</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Compare All Emails</from><to>remove duplicates 2</to><enabled>Y</enabled> </hop>  <hop> <from>remove duplicates 2</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>  <hop> <from>remove duplicates 2</from><to>Dummy (do nothing) 2</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>All Email</name>
     <type>CsvInput</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -159,8 +159,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>400</xloc>
-      <yloc>425</yloc>
+      <xloc>575</xloc>
+      <yloc>225</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -175,7 +175,897 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;AutomationTest&#47;nten_change-2013-11-07.csv</filename>
+    <filename>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;BasicCleaning&#47;nten_change_a_quarterly_journal_for_nonprofit_leaders.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>&quot;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>First name</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>8</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Last Name</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>13</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Email Address</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>26</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Organization</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>36</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Title</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>52</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Job Type</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>26</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Do you want to receive other NTEN news and updates via email?</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>16</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Source</name>
+        <type>Date</type>
+        <format>yyyy&#47;MM&#47;dd HH:mm:ss.SSS</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>75</xloc>
+      <yloc>125</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Change headers</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>First name</name>
+        <rename>first_name</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Last Name</name>
+        <rename>last_name</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Email Address</name>
+        <rename>email</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Organization</name>
+        <rename>organization</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Title</name>
+        <rename>job_title</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Job Type</name>
+        <rename>job_type</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Do you want to receive other NTEN news and updates via email?</name>
+        <rename>opt_in</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>200</xloc>
+      <yloc>125</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ChangeJournal-journalOnly.xls</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;AutomationExports&#47;JournalOnly-</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>Y</SpecifyFormat>
+      <date_time_format>yyyy-MM-dd</date_time_format>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>first_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>last_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>email</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>organization</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>job_title</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>job_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>opt_in</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>duplicate</name>
+        <type>String</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>975</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ChangeJournal-subscribeAll.xls</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;AutomationExports&#47;Journal-</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>Y</SpecifyFormat>
+      <date_time_format>yyyy-MM-dd</date_time_format>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+      <field>
+        <name>first_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>last_name</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>email</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>organization</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>job_title</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>job_type</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>opt_in</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>duplicate</name>
+        <type>String</type>
+        <format/>
+      </field>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>975</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get New</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>All Email</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>email</name>
+        <field>email</field>
+      </key>
+      <value>
+        <name>email</name>
+        <rename>duplicate</rename>
+        <default>new</default>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>650</xloc>
+      <yloc>125</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Journal Filter</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>ChangeJournal-subscribeAll.xls</send_true_to>
+<send_false_to>ChangeJournal-journalOnly.xls</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>source</leftvalue>
+ <function>=</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>Journal</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>875</xloc>
+      <yloc>125</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Journal or Journal Only</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>opt_in</field_to_use>
+    <target_field>source</target_field>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>Yes, sign me up!</source_value>
+        <target_value>Journal</target_value>
+      </field>
+      <field>
+        <source_value>No thanks</source_value>
+        <target_value>Journal Only</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>325</xloc>
+      <yloc>125</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Newsletter Sign-up</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;BasicCleaning&#47;sign_up_for_nten_connect.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>&quot;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>Serial</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>SID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Time</name>
+        <type>Date</type>
+        <format>MM&#47;dd&#47;yyyy</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Draft</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>IP Address</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>UID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Username</name>
+        <type>Date</type>
+        <format>yyyy&#47;MM&#47;dd HH:mm:ss.SSS</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>First Name</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>7</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Last name</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>14</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Email</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>28</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Organization</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>29</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Job Title</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>35</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Job Type</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>29</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Address</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>31</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>City</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>16</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>State</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Zip</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>6</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Country</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>13</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>75</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>email</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>375</xloc>
+      <yloc>575</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>email</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>375</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Newsletter Quick Sign-up</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;BasicCleaning&#47;quick_signup.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>&quot;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>Serial</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>SID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Time</name>
+        <type>Date</type>
+        <format>MM&#47;dd&#47;yyyy</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Draft</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>IP Address</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>UID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Username</name>
+        <type>Date</type>
+        <format>yyyy&#47;MM&#47;dd HH:mm:ss.SSS</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>E-mail</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>37</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>75</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Quick Sign-up additional info</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;BasicCleaning&#47;thanks.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -273,12 +1163,12 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>9</length>
+        <length>10</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Last Name</name>
+        <name>Last name</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -289,13 +1179,13 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Email Address</name>
+        <name>Email</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>32</length>
+        <length>37</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -306,18 +1196,18 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>56</length>
+        <length>41</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Title</name>
+        <name>Job title</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>38</length>
+        <length>44</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -333,18 +1223,40 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Do you want to receive other NTEN news and updates via email?</name>
+        <name>Address</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>16</length>
+        <length>29</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Where did you hear about NTEN:Change?</name>
+        <name>City</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>13</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>State</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>2</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Zip</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -355,27 +1267,50 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>Source</name>
-        <type>Date</type>
-        <format>yyyy&#47;MM&#47;dd HH:mm:ss.SSS</format>
+        <name>Country</name>
+        <type>String</type>
+        <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>-1</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>50</xloc>
-      <yloc>325</yloc>
+      <xloc>75</xloc>
+      <yloc>575</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Change headers</name>
+    <name>email field only</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>E-mail</name>
+        <rename>email</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>275</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>select&#47;normalize headers</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -388,11 +1323,11 @@
         <rename>first_name</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>Last Name</name>
+      </field>      <field>        <name>Last name</name>
         <rename>last_name</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>Email Address</name>
+      </field>      <field>        <name>Email</name>
         <rename>email</rename>
         <length>-2</length>
         <precision>-2</precision>
@@ -400,7 +1335,7 @@
         <rename>organization</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>Title</name>
+      </field>      <field>        <name>Job title</name>
         <rename>job_title</rename>
         <length>-2</length>
         <precision>-2</precision>
@@ -408,22 +1343,38 @@
         <rename>job_type</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>Do you want to receive other NTEN news and updates via email?</name>
-        <rename>opt_in</rename>
+      </field>      <field>        <name>Address</name>
+        <rename>address</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>City</name>
+        <rename>city</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>State</name>
+        <rename>state</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Zip</name>
+        <rename>postal_code</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Country</name>
+        <rename>country</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>175</xloc>
-      <yloc>325</yloc>
+      <xloc>275</xloc>
+      <yloc>575</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>ChangeJournal-journalOnly.xls</name>
-    <type>ExcelOutput</type>
+    <name>Join on Quick sign-up email</name>
+    <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -431,105 +1382,26 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <header>Y</header>
-    <footer>N</footer>
-    <encoding/>
-    <append>N</append>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;AutomationTest&#47;ChangeJournal-journalOnly.xls</name>
-      <extention>xls</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <create_parent_folder>N</create_parent_folder>
-      <split>N</split>
-      <add_date>Y</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <sheetname>Sheet1</sheetname>
-      <autosizecolums>N</autosizecolums>
-      <nullisblank>N</nullisblank>
-      <protect_sheet>N</protect_sheet>
-      <password>Encrypted </password>
-      <splitevery>0</splitevery>
-      <usetempfiles>N</usetempfiles>
-      <tempdirectory/>
-      </file>
-    <template>
-      <enabled>N</enabled>
-      <append>N</append>
-      <filename>template.xls</filename>
-    </template>
-    <fields>
-      <field>
-        <name>first_name</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>last_name</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>email</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>organization</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>job_title</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>job_type</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>opt_in</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>duplicate</name>
-        <type>String</type>
-        <format/>
-      </field>
-    </fields>
-    <custom>
-    <header_font_name>arial</header_font_name>
-    <header_font_size>10</header_font_size>
-    <header_font_bold>N</header_font_bold>
-    <header_font_italic>N</header_font_italic>
-    <header_font_underline>no</header_font_underline>
-    <header_font_orientation>horizontal</header_font_orientation>
-    <header_font_color>black</header_font_color>
-    <header_background_color>none</header_background_color>
-    <header_row_height>255</header_row_height>
-    <header_alignment>left</header_alignment>
-    <header_image/>
-    <row_font_name>arial</row_font_name>
-    <row_font_size>10</row_font_size>
-    <row_font_color>black</row_font_color>
-    <row_background_color>none</row_background_color>
-      </custom>
+<join_type>LEFT OUTER</join_type>
+<step1>Sort rows 2</step1>
+<step2>Unique rows</step2>
+    <keys_1>
+      <key>email</key>
+    </keys_1>
+    <keys_2>
+      <key>email</key>
+    </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>375</yloc>
+      <xloc>600</xloc>
+      <yloc>575</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>ChangeJournal-subscribeAll.xls</name>
-    <type>ExcelOutput</type>
+    <name>Unique rows</name>
+    <type>Unique</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -537,104 +1409,297 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <header>Y</header>
-    <footer>N</footer>
-    <encoding/>
-    <append>N</append>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;AutomationTest&#47;ChangeJournal-subscribeAll.xls</name>
-      <extention>xls</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <create_parent_folder>N</create_parent_folder>
-      <split>N</split>
-      <add_date>Y</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <sheetname>Sheet1</sheetname>
-      <autosizecolums>N</autosizecolums>
-      <nullisblank>N</nullisblank>
-      <protect_sheet>N</protect_sheet>
-      <password>Encrypted </password>
-      <splitevery>0</splitevery>
-      <usetempfiles>N</usetempfiles>
-      <tempdirectory/>
-      </file>
-    <template>
-      <enabled>N</enabled>
-      <append>N</append>
-      <filename>template.xls</filename>
-    </template>
-    <fields>
-      <field>
-        <name>first_name</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>last_name</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>email</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>organization</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>job_title</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>job_type</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>opt_in</name>
-        <type>String</type>
-        <format/>
-      </field>
-      <field>
-        <name>duplicate</name>
-        <type>String</type>
-        <format/>
-      </field>
-    </fields>
-    <custom>
-    <header_font_name>arial</header_font_name>
-    <header_font_size>10</header_font_size>
-    <header_font_bold>N</header_font_bold>
-    <header_font_italic>N</header_font_italic>
-    <header_font_underline>no</header_font_underline>
-    <header_font_orientation>horizontal</header_font_orientation>
-    <header_font_color>black</header_font_color>
-    <header_background_color>none</header_background_color>
-    <header_row_height>255</header_row_height>
-    <header_alignment>left</header_alignment>
-    <header_image/>
-    <row_font_name>arial</row_font_name>
-    <row_font_size>10</row_font_size>
-    <row_font_color>black</row_font_color>
-    <row_background_color>none</row_background_color>
-      </custom>
-     <cluster_schema/>
+      <count_rows>N</count_rows>
+      <count_field/>
+      <reject_duplicate_row>N</reject_duplicate_row>
+      <error_description/>
+    <fields>      <field>        <name>email</name>
+        <case_insensitive>N</case_insensitive>
+        </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>225</yloc>
+      <xloc>475</xloc>
+      <yloc>575</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Get New</name>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>Serial</name>
+      </remove>      <remove>        <name>SID</name>
+      </remove>      <remove>        <name>Time</name>
+      </remove>      <remove>        <name>Draft</name>
+      </remove>      <remove>        <name>IP Address</name>
+      </remove>      <remove>        <name>UID</name>
+      </remove>      <remove>        <name>Username</name>
+      </remove>      <meta>        <name>First Name</name>
+        <rename>first_name</rename>
+        <type>-</type>
+        <length>7</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Last name</name>
+        <rename>last_name</rename>
+        <type>-</type>
+        <length>14</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Email</name>
+        <rename>email</rename>
+        <type>String</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type>normal</storage_type>
+      </meta>      <meta>        <name>Organization</name>
+        <rename>organization</rename>
+        <type>-</type>
+        <length>29</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Job Title</name>
+        <rename>job_title</rename>
+        <type>-</type>
+        <length>35</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Job Type</name>
+        <rename>job_type</rename>
+        <type>-</type>
+        <length>29</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Address</name>
+        <rename>address</rename>
+        <type>-</type>
+        <length>31</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>City</name>
+        <rename>city</rename>
+        <type>-</type>
+        <length>16</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>State</name>
+        <rename>state</rename>
+        <type>-</type>
+        <length>2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Zip</name>
+        <rename>postal_code</rename>
+        <type>-</type>
+        <length>6</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Country</name>
+        <rename>country</rename>
+        <type>-</type>
+        <length>13</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>275</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>first_name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>last_name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>email</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>organization</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>job_title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>job_type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>address</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>city</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>state</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>postal_code</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>country</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>625</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>email</name>
+        <ascending>N</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>450</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Unique rows (HashSet)</name>
+    <type>UniqueRowsByHashSet</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <store_values>N</store_values>
+      <reject_duplicate_row>N</reject_duplicate_row>
+      <error_description/>
+    <fields>      <field>        <name>email</name>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>650</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Compare All Emails</name>
     <type>StreamLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -645,7 +1710,7 @@
            </partitioning>
     <from>All Email</from>
     <input_sorted>N</input_sorted>
-    <preserve_memory>N</preserve_memory>
+    <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
     <integer_pair>N</integer_pair>
     <lookup>
@@ -662,14 +1727,80 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>400</xloc>
+      <xloc>650</xloc>
       <yloc>325</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Journal Filter</name>
+    <name>Microsoft Excel Output</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>&#47;home&#47;brylie&#47;NTEN&#47;Weekly&#47;Imports&#47;2013-11-13&#47;AutomationExports&#47;Newsletter-</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>Y</SpecifyFormat>
+      <date_time_format>yyyy-MM-dd</date_time_format>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+      </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+    </fields>
+    <custom>
+    <header_font_name>arial</header_font_name>
+    <header_font_size>10</header_font_size>
+    <header_font_bold>N</header_font_bold>
+    <header_font_italic>N</header_font_italic>
+    <header_font_underline>no</header_font_underline>
+    <header_font_orientation>horizontal</header_font_orientation>
+    <header_font_color>black</header_font_color>
+    <header_background_color>none</header_background_color>
+    <header_row_height>255</header_row_height>
+    <header_alignment>left</header_alignment>
+    <header_image/>
+    <row_font_name>arial</row_font_name>
+    <row_font_size>10</row_font_size>
+    <row_font_color>black</row_font_color>
+    <row_background_color>none</row_background_color>
+      </custom>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>975</xloc>
+      <yloc>325</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove duplicates</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -678,27 +1809,27 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>ChangeJournal-subscribeAll.xls</send_true_to>
-<send_false_to>ChangeJournal-journalOnly.xls</send_false_to>
+<send_true_to>Journal Filter</send_true_to>
+<send_false_to>Dummy (do nothing)</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
- <leftvalue>source</leftvalue>
+ <leftvalue>duplicate</leftvalue>
  <function>=</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>Journal</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>new</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>500</xloc>
-      <yloc>325</yloc>
+      <xloc>775</xloc>
+      <yloc>125</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Journal or Journal Only</name>
-    <type>ValueMapper</type>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -706,23 +1837,56 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <field_to_use>opt_in</field_to_use>
-    <target_field>source</target_field>
-    <non_match_default/>
-    <fields>
-      <field>
-        <source_value>Yes, sign me up!</source_value>
-        <target_value>Journal</target_value>
-      </field>
-      <field>
-        <source_value>No thanks</source_value>
-        <target_value>Journal Only</target_value>
-      </field>
-    </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>300</xloc>
+      <xloc>775</xloc>
+      <yloc>25</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove duplicates 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Microsoft Excel Output</send_true_to>
+<send_false_to>Dummy (do nothing) 2</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>duplicate</leftvalue>
+ <function>=</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>new</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>775</xloc>
       <yloc>325</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy (do nothing) 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>775</xloc>
+      <yloc>250</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
