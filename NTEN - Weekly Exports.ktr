@@ -1393,8 +1393,8 @@
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>600</xloc>
-      <yloc>575</yloc>
+      <xloc>525</xloc>
+      <yloc>500</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1839,7 +1839,7 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>775</xloc>
+      <xloc>825</xloc>
       <yloc>25</yloc>
       <draw>Y</draw>
       </GUI>
@@ -1885,8 +1885,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>775</xloc>
-      <yloc>250</yloc>
+      <xloc>800</xloc>
+      <yloc>225</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
